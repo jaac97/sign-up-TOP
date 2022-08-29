@@ -24,6 +24,45 @@
                 <h1>Pet friends</h1>
             </div>
         </div>
+        <div class="main__form">
+            <p class="main__warning">
+                This is not a real online service! You know need something like this in real life to help you realize your deepest dreams.
+                Sign up now to get started
+            </p>
+            <p class="main__warning">You know you want to.</p>
+        <form action="/alpha" class="form" id="sign-up">
+            <p class="form__heading">Let's do this!</p>
+            <div class="form__group">
+                <input class="form__input" type="text" name="fname" id="fname" required autocomplete="name">
+                <label class="form__control" for="fname">First Name</label>
+            </div>
+            <div class="form__group">
+                <input class="form__input" type="text" name="lname" id="lname" required autocomplete="family-name">
+                <label class="form__control" for="lanme">Last Name</label>
+            </div>
+            <div class="form__group">
+                <input class="form__input" type="email" name="email" id="email" required autocomplete="email">
+                <label class="form__control" for="email">example@email.com</label>
+            </div>
+            <div class="form__group">
+                <input class="form__input" type="tel" name="tel" id="tel" required autocomplete="tel" maxlength="15" aria-describedby="tel-info">
+                <label class="form__control" for="tel">(+593)123456789</label>
+                <span class="form__hint" id="tel-info">This information is only use to get in touch with the pet foundations</span>
+            </div>
+            <div class="form__group">
+                <input class="form__input" type="password" name="password" id="password" required autocomplete="new-password" minlength="8" aria-describedby="password-validation">
+                <label class="form__control" for="password">Password</label>
+                <span class="form__hint" id="password-validation">Please use at least eight characters</span>
+            </div>
+            <!-- <div class="form__group">
+                <input class="form__input" type="password" name="rpassword" id="rpassword" required autocomplete="new-password" minlength="8" aria-describedby="rpassword-validation">
+                <label class="form__control" for="rpassword">Password</label>
+                <span class="form__hint" id="rpassword-validation">Please  repeat the password, using at least eight characters</span>
+            </div> -->
+        </form>
+        <input type="submit" form="sign-up" value="Create Account">
+        <p class="main__login">Already have an account? <span class="main__loginLink">Log in</span></p>
+    </div>
     </main>
     
 </body>
