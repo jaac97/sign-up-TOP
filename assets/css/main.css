@@ -1,0 +1,95 @@
+
+@font-face {
+    font-family:'Charmonman' ;
+    src: url('../fonts/Charmonman-Regular.ttf');
+}
+@font-face {
+    font-family:'Charmonman bold' ;
+    src: url('../fonts/Charmonman-Bold.ttf');
+}
+:root{
+    --font: 'Charmonman', cursive;
+    --font-bold: 'Charmonman bold', cursive;
+
+    --white: rgba(255,255,255,1)
+
+}
+.material-icons{
+    font-size: 8rem;
+}
+
+/* Color Theme Swatches in RGBA */
+.color-theme_Pink-Groovy-Here-Comes-The-Sun-Sticker-by-designxmad-1-rgba { color: rgba(59, 178, 191, 1); }
+.color-theme_Pink-Groovy-Here-Comes-The-Sun-Sticker-by-designxmad-2-rgba { color: rgba(156, 217, 217, 1); }
+.color-theme_Pink-Groovy-Here-Comes-The-Sun-Sticker-by-designxmad-3-rgba { color: rgba(242, 205, 94, 1); }
+.color-theme_Pink-Groovy-Here-Comes-The-Sun-Sticker-by-designxmad-4-rgba { color: rgba(242, 167, 75, 1); }
+.color-theme_Pink-Groovy-Here-Comes-The-Sun-Sticker-by-designxmad-5-rgba { color: rgba(217, 137, 119, 1); }
+
+
+
+body{
+    font-family: var(--font);
+    overflow: hidden;
+    max-width: 100%;
+}
+.main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 768px){
+    .main{
+        flex-direction: row;
+        gap: 3rem;
+    }
+}
+.main__imagen{
+    position: relative;
+   width: 100%;
+
+}
+
+@media (min-width: 768px){
+    .main__imagen{
+       width: 30%;
+
+    }
+    .main__form{
+        flex: 0 0 70%;
+    }
+}
+.picture{
+    height: 30vh;
+    background-image: url('../img/dog_640.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+}
+@media (min-width: 768px){
+    .picture{
+        max-width: 100%;
+        height: 100vh;
+    }
+}
+.logo{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color:rgba(0, 0, 0, .8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--white);
+    gap: 2rem;
+}
+@media (min-width: 768px){
+    .logo{
+        height: max(10rem,15vh);
+        top: 12vh;
+    }
+}
+.logo__heading{
+    font-family: var(--font-bold);
+    font-weight: 700;
+}
