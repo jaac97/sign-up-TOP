@@ -52,13 +52,13 @@ body {
     font-family: var(--font);
     min-height: 100vh;
     max-width: 100%;
-    overflow: hidden;
 }
 
 .main {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden; 
 }
 
 @media (min-width: 768px) {
@@ -168,7 +168,7 @@ Form sign up
 
 .form {
     padding: 0 2rem 2rem 2rem;
-    min-height: 50vh;
+    min-height: 40vh;
 }
 
 @media (min-width: 768px) {
@@ -225,6 +225,7 @@ Form sign up
 .form__hint {
     display: block;
     margin-top: .8rem;
+    font-weight: 700;
 }
 
 .form__input:focus+.form__control {
@@ -253,11 +254,32 @@ Form sign up
     padding: 2rem;
     position: relative;
     top: 0;
+    text-align: center;
 }
 
 .form__submit {
     padding: 1rem 3rem;
-    background-color: var(--success);
+    background-color: transparent;
     border: none;
+    border: 3px solid var(--success);
     color: var(--dark);
+    cursor: pointer;
+    font-family: var(--font-bold);
+    font-weight: 700;
+    display: inline-block;
+    margin: 0 auto 2rem;
+}
+.form__submit:hover {
+    background-color: var(--success);
+}
+
+.main__loginLink{
+    color: var(--success);
+    font-weight: 700;
+    font-family: var(--font-bold);
+    cursor: pointer;
+    text-decoration: none;
+}
+.main__loginLink:hover{
+    text-decoration: underline;
 }
