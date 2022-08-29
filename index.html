@@ -60,14 +60,9 @@
                     <label class="form__control" for="password">Password</label>
                     <span class="form__hint" id="password-validation">Please use at least eight characters</span>
                 </div>
-                <!-- <div class="form__group">
-                <input class="form__input" type="password" name="rpassword" id="rpassword" required autocomplete="new-password" minlength="8" aria-describedby="rpassword-validation">
-                <label class="form__control" for="rpassword">Password</label>
-                <span class="form__hint" id="rpassword-validation">Please  repeat the password, using at least eight characters</span>
-            </div> -->
             </form>
             <div class="main__footer">
-                <input type="submit" form="sign-up" value="Create Account">
+                <input type="submit" class="form__submit" form="sign-up" value="Create Account">
                 <p class="main__login">Already have an account? <span class="main__loginLink">Log in</span></p>
             </div>
         </div>
@@ -80,10 +75,13 @@
                 //if(e.target.value.length )
                 if(e.target.validity.valid) {
                   e.target.classList.add('form__input--success')
-                }else{
-                  e.target.classList.add('form__input--warning')
-
                 }
+            })
+        })
+        inputs.forEach(input => {
+            input.addEventListener('invalid', e => {
+                e.target.classList.add('form__input--error')
+  
             })
         })
     </script>
