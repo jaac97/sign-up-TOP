@@ -24,12 +24,15 @@
             </div>
         </div>
         <div class="main__form">
-            <p class="main__warning">
-                This is not a real online service! You know need something like this in real life to help you realize
-                your deepest dreams.
-                Sign up now to get started
-            </p>
-            <p class="main__warning">You know you want to.</p>
+            <div class="main__warnings">
+                <p class="main__warning">
+                    This is not a real online service! You know need something like this in real life to help you
+                    realize
+                    your deepest dreams.
+                    Sign up now to get started
+                </p>
+                <p class="main__warning">You know you want to.</p>
+            </div>
             <form action="/alpha" class="form" id="sign-up">
                 <p class="form__heading">Let's do this!</p>
                 <div class="form__group">
@@ -63,11 +66,21 @@
                 <span class="form__hint" id="rpassword-validation">Please  repeat the password, using at least eight characters</span>
             </div> -->
             </form>
-            <input type="submit" form="sign-up" value="Create Account">
-            <p class="main__login">Already have an account? <span class="main__loginLink">Log in</span></p>
+            <div class="main__footer">
+                <input type="submit" form="sign-up" value="Create Account">
+                <p class="main__login">Already have an account? <span class="main__loginLink">Log in</span></p>
+            </div>
         </div>
     </main>
-
+    <script>
+        const inputs = document.querySelectorAll('input:not([type="submit"])');
+        inputs.forEach(input => {
+            input.addEventListener('blur', e => {
+                //if(e.target.value.length )
+                console.log(e.target.validity)
+            })
+        })
+    </script>
 </body>
 
 </html>

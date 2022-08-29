@@ -1,64 +1,84 @@
-
 @font-face {
-    font-family:'Charmonman' ;
+    font-family: 'Charmonman';
     src: url('../fonts/Charmonman-Regular.ttf');
 }
+
 @font-face {
-    font-family:'Charmonman bold' ;
+    font-family: 'Charmonman bold';
     src: url('../fonts/Charmonman-Bold.ttf');
 }
-:root{
+
+:root {
     --font: 'Charmonman', cursive;
     --font-bold: 'Charmonman bold', cursive;
 
-    --white: rgba(255,255,255,1)
-
+    --white: rgba(255, 255, 255, 1);
+    --main: rgba(59, 178, 191, 1);
+    --mainlight: rgba(156, 217, 217, 1);
+    --secondary: rgba(242, 205, 94, 1);
+    --secondaryLight: rgba(242, 167, 75, 1);
+    --error: rgba(217, 137, 119, 1);
 }
-.material-icons{
+
+.material-icons {
     font-size: 8rem;
 }
 
 /* Color Theme Swatches in RGBA */
-.color-theme_Pink-Groovy-Here-Comes-The-Sun-Sticker-by-designxmad-1-rgba { color: rgba(59, 178, 191, 1); }
-.color-theme_Pink-Groovy-Here-Comes-The-Sun-Sticker-by-designxmad-2-rgba { color: rgba(156, 217, 217, 1); }
-.color-theme_Pink-Groovy-Here-Comes-The-Sun-Sticker-by-designxmad-3-rgba { color: rgba(242, 205, 94, 1); }
-.color-theme_Pink-Groovy-Here-Comes-The-Sun-Sticker-by-designxmad-4-rgba { color: rgba(242, 167, 75, 1); }
-.color-theme_Pink-Groovy-Here-Comes-The-Sun-Sticker-by-designxmad-5-rgba { color: rgba(217, 137, 119, 1); }
+.color-theme_Pink-Groovy-Here-Comes-The-Sun-Sticker-by-designxmad-1-rgba {
+    color: rgba(59, 178, 191, 1);
+}
+
+.color-theme_Pink-Groovy-Here-Comes-The-Sun-Sticker-by-designxmad-2-rgba {
+    color: rgba(156, 217, 217, 1);
+}
+
+.color-theme_Pink-Groovy-Here-Comes-The-Sun-Sticker-by-designxmad-3-rgba {
+    color: rgba(242, 205, 94, 1);
+}
+
+.color-theme_Pink-Groovy-Here-Comes-The-Sun-Sticker-by-designxmad-4-rgba {
+    color: rgba(242, 167, 75, 1);
+}
+
+.color-theme_Pink-Groovy-Here-Comes-The-Sun-Sticker-by-designxmad-5-rgba {
+    color: rgba(217, 137, 119, 1);
+}
 
 
 
-body{
+body {
     font-family: var(--font);
-    overflow: hidden;
+    min-height: 100vh;
     max-width: 100%;
 }
-.main{
+
+.main {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
-@media (min-width: 768px){
-    .main{
+
+@media (min-width: 768px) {
+    .main {
         flex-direction: row;
-        gap: 3rem;
     }
 }
-.main__imagen{
+
+.main__imagen {
     position: relative;
-   width: 100%;
+    width: 100%;
 
 }
 
-@media (min-width: 768px){
-    .main__imagen{
-       width: 30%;
+@media (min-width: 768px) {
+    .main__imagen {
+        width: 40%;
 
     }
-    .main__form{
-        flex: 0 0 70%;
-    }
 }
-.picture{
+
+.picture {
     height: 30vh;
     background-image: url('../img/dog_640.jpg');
     background-position: center;
@@ -66,30 +86,141 @@ body{
     background-repeat: no-repeat;
     width: 100vw;
 }
-@media (min-width: 768px){
-    .picture{
+
+@media (min-width: 768px) {
+    .picture {
         max-width: 100%;
         height: 100vh;
     }
 }
-.logo{
+
+.logo {
     position: absolute;
     height: 100%;
     width: 100%;
-    background-color:rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .8);
     display: flex;
     justify-content: center;
     align-items: center;
     color: var(--white);
     gap: 2rem;
 }
-@media (min-width: 768px){
-    .logo{
-        height: max(10rem,15vh);
+
+@media (min-width: 768px) {
+    .logo {
+        height: max(10rem, 15vh);
         top: 12vh;
     }
 }
-.logo__heading{
+
+.logo__heading {
     font-family: var(--font-bold);
     font-weight: 700;
+}
+
+/* Right side
+Form sign up
+*/
+.main__form {
+    /* background-color: var(--mainlight); */
+}
+
+@media (min-width: 768px) {
+    .main__form {
+        flex: 0 0 60%;
+        margin-top: 15vh;
+        position: relative;
+        background-color: unset;
+    }
+}
+
+.main__warnings {
+    height: 21rem;
+    padding: 2rem;
+    margin-bottom: 4rem;
+
+}
+
+@media (min-width: 768px) {
+    .main__warnings {
+        margin-bottom: 0;
+    }
+}
+
+.main__warning {
+    font-size: 1.6rem;
+    line-height: 2;
+    font-family: var(--font-bold);
+    font-weight: 700;
+    width: 100%;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .main__warning {
+        text-align: justify;
+        font-size: 2rem;
+        font-family: var(--font-bold);
+    }
+}
+
+.form {
+    padding: 0 2rem 2rem 2rem;
+    min-height: 50vh;
+}
+@media (min-width: 768px){
+    .form{
+    background-color: var(--mainlight);
+
+    }
+}
+.form__heading {
+    text-align: center;
+    font-family: var(--font-bold);
+
+}
+
+@media (min-width: 768px) {
+    .form__heading {
+        text-align: left;
+    }
+}
+
+@media (min-width: 768px) {
+    .form {
+        width: 100%;
+        position: absolute;
+        top: 20rem;
+        height: 38vh;
+        padding: 2rem;
+    }
+}
+
+.form__group {
+    position: relative;
+}
+.form__input{
+    width: 100%;
+    height: 5rem;
+    border: none;
+    border-bottom:1px solid var(--mainlight);
+    margin-bottom: 1px;
+}
+.form__input:focus{
+    outline: none;
+}
+.form__control{
+    position: absolute;
+    /* top: calc(5rem / 2); */
+    line-height: 3;
+    left: 1rem; 
+    opacity: .3;
+}
+.form__input:focus + .form__control{
+    opacity: 0;
+}
+.main__footer {
+    padding: 2rem;
+    position: relative;
+    top: 35rem;
 }
