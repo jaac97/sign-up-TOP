@@ -41,7 +41,7 @@
                 </div>
                 <div class="form__group">
                     <input class="form__input" type="text" name="lname" id="lname" required autocomplete="family-name">
-                    <label class="form__control" for="lanme">Last Name</label>
+                    <label class="form__control" for="lname">Last Name</label>
                 </div>
                 <div class="form__group">
                     <input class="form__input" type="email" name="email" id="email" required autocomplete="email">
@@ -73,11 +73,17 @@
         </div>
     </main>
     <script>
+        document.querySelector('.form').reset();
         const inputs = document.querySelectorAll('input:not([type="submit"])');
         inputs.forEach(input => {
             input.addEventListener('blur', e => {
                 //if(e.target.value.length )
-                console.log(e.target.validity)
+                if(e.target.validity.valid) {
+                  e.target.classList.add('form__input--success')
+                }else{
+                  e.target.classList.add('form__input--warning')
+
+                }
             })
         })
     </script>

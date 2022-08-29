@@ -18,6 +18,7 @@
     --secondary: rgba(242, 205, 94, 1);
     --secondaryLight: rgba(242, 167, 75, 1);
     --error: rgba(217, 137, 119, 1);
+    --success: rgba(30,232,106,.91)
 }
 
 .material-icons {
@@ -203,18 +204,23 @@ Form sign up
     width: 100%;
     height: 5rem;
     border: none;
+    padding: 0 1rem;
     border-bottom:1px solid var(--mainlight);
-    margin-bottom: 1px;
+
 }
 .form__input:focus{
     outline: none;
 }
 .form__control{
     position: absolute;
-    /* top: calc(5rem / 2); */
+    width: 100%;
     line-height: 3;
     left: 1rem; 
     opacity: .3;
+}
+.form__hint{
+    display: block;
+    margin-top: .8rem;
 }
 .form__input:focus + .form__control{
     opacity: 0;
@@ -223,4 +229,10 @@ Form sign up
     padding: 2rem;
     position: relative;
     top: 35rem;
+}
+.form__input--success {
+    border-bottom: 1px solid var(--success);
+}
+.form__input--success + .form__control{
+    opacity: 0;
 }
